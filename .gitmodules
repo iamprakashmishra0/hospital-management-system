@@ -1,0 +1,18 @@
+[submodule "appointment-service"]
+	path = appointment-service
+	url = https://github.com/iamprakashmishra0/appointment-service.git
+[submodule "notification-service"]
+	path = notification-service
+	url = https://github.com/iamprakashmishra0/notification-service.git
+[submodule "billing-service"]
+	path = billing-service
+	url = https://github.com/iamprakashmishra0/billing-service.git
+[submodule "doctor-service"]
+	path = doctor-service
+	url = https://github.com/iamprakashmishra0/doctor-service.git
+[submodule "patient-service"]
+	path = patient-service
+	url = https://github.com/iamprakashmishra0/patient-service.git
+[submodule "payment-service"]
+	path = payment-service
+	url = https://github.com/iamprakashmishra0/payment-service.git

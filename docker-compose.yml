@@ -1,0 +1,54 @@
+version: "3.9"
+
+services:
+  patient-service:
+    build: ./patient-service
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./patient-service/service_data:/app/service_data
+
+  doctor-service:
+    build: ./doctor-service
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./doctor-service/service_data:/app/service_data
+
+  appointment-service:
+    build: ./appointment-service
+    ports:
+      - "8003:8003"
+    volumes:
+      - ./appointment-service/service_data:/app/service_data
+    depends_on:
+      - patient-service
+      - doctor-service
+
+  billing-service:
+    build: ./billing-service
+    ports:
+      - "8004:8004"
+    volumes:
+      - ./billing-service/service_data:/app/service_data
+
+  prescription-service:
+    build: ./prescription-service
+    ports:
+      - "8005:8005"
+    volumes:
+      - ./prescription-service/service_data:/app/service_data
+
+  payment-service:
+    build: ./payment-service
+    ports:
+      - "8006:8006"
+    volumes:
+      - ./payment-service/service_data:/app/service_data
+
+  notification-service:
+    build: ./notification-service
+    ports:
+      - "8007:8007"
+    volumes:
+      - ./notification-service/service_data:/app/service_data
